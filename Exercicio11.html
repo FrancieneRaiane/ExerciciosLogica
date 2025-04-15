@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maior numero</title>
+</head>
+<body>
+    <script>
+        // Exercício 11: Crie uma função chamada encontrarMaiorNumero que recebe um array de números 
+        // e retorna o maior valor presente no array.
+        function encontrarMaiorNumero(numeros) {
+            if (numeros.length === 0) {
+                throw new Error("O array não pode estar vazio");
+            }
+        let maior = numeros[0];
+            for (let i = 1; i < numeros.length; i++) {
+                if (numeros[i] > maior) {
+                     maior = numeros[i];
+                }
+            }
+        return maior;
+        }
+        // Exemplo de uso:
+        const numeros = [10, 25, 36, 78, 12, 99, 5];
+        console.log(encontrarMaiorNumero(numeros)); // Saída: 99
+    </script>
+</body>
+</html>
